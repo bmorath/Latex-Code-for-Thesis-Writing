@@ -1,4 +1,4 @@
-# Latex-code-for-Master-Thesis
+# Latex code for Thesis
 
 This aim of this project is to help students writing a bachelor's thesis or master's thesis while using the typesetting program LaTeX. 
 
@@ -12,5 +12,6 @@ The following often-occurring problems faced while using LaTeX were made publicl
   - Setting up a vertical table (Sideways table.tex)
   - Creating a multipage (Multipage.tex)
   
-  
- All code sequences were complied with Texmaker 5.0.4 (http://www.xm1math.net/texmaker/) as of the year 2020 and can be used freely.
+ The coding was used for writing a master's thesis, but may be used for any other type of thesis (bachelor thesis, essay etc.) as well.
+ 
+ All code sequences were complied with Texmaker 5.0.4 (http://www.xm1math.net/texmaker/) as of the year 2020 and can be used freely. 
