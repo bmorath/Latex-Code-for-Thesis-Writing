@@ -1,0 +1,25 @@
+% =========== Use packages ========
+
+% Rename "Contents" into "Table of Contents"
+\addto\captionsenglish{
+  \renewcommand{\contentsname}
+    {Table of Contents}}
+
+
+
+% =========== Main Part ========
+
+% Include "List of Figures" to Table of Contents
+\newpage
+\addcontentsline{toc}{chapter}{List of Figures}
+{\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\figurename~\oldnumberline}%
+\listoffigures}
+
+
+% Include "List of Tables" to Table of Contents
+\newpage
+\addcontentsline{toc}{chapter}{List of Tables}
+{\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\tablename~\oldnumberline}%
+\listoftables}
