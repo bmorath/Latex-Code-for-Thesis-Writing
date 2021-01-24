@@ -1,0 +1,334 @@
+\documentclass[11pt,a4paper,oneside]{report}
+
+% ======= Use packages ===
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {Bilder/} }
+% Headings
+\usepackage{fancyhdr}
+\usepackage{setspace}
+% Citation Style
+\usepackage[english]{babel}
+\usepackage{apacite}
+% Include List of Abbreviations
+\usepackage[printonlyused]{acronym}
+% Breaking long URLs to prevent overflow
+\usepackage[hyphens, obeyspaces, spaces]{url}
+% Include Tikz
+\usepackage{pgfplots}
+% Breaking huge tables to prevent overflow
+\usepackage{tabularx}
+% Show tables in sideways
+\usepackage{rotating}
+% Multi-row captions
+\usepackage{caption}
+% Multi-row tables
+\usepackage{multirow}
+% Centering page numbers
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.0cm,bottom=2.0cm]{geometry}
+% Change text color
+\usepackage{color}
+% APA 6th Tables and Figures formatting
+\usepackage{multirow,booktabs,setspace,caption}
+\DeclareCaptionLabelSeparator*{spaced}{\\[2ex]}
+\captionsetup[table]{textfont=it,format=plain,justification=justified,
+  singlelinecheck=false,labelsep=spaced,skip=0pt}
+\captionsetup[figure]{labelsep=period,labelfont=it,justification=justified,
+  singlelinecheck=false,font=doublespacing}
+% Include PDF
+\usepackage{pdfpages}
+% Rename Contents into Table of Contents
+\addto\captionsenglish{
+  \renewcommand{\contentsname}
+    {Table of Contents}}
+% Blindtext for testing purposes
+\usepackage{blindtext}
+
+
+
+% ======= Header =============
+
+\pagestyle{fancy}
+\lhead{\slshape \rightmark} 
+\chead{}
+\rhead{\slshape} %\rightmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+
+
+
+
+% ======== Title Page ============
+\begin{document}
+
+\begin{center}
+\begin{tabular}{p{\textwidth}}
+\thispagestyle{empty}
+\\
+\begin{center}
+\includegraphics[scale=0.5]{Hohenheim_Logo.png}
+\end{center}
+\\
+\begin{center}
+\large{Faculty of Business, Economics and Social Sciences \\
+Chair for International Management \\
+Prof. Dr. Kurt C. Hose}
+\end{center}
+\\
+\begin{center}
+Free Scientific Thesis to Obtain the Academic Degree\\
+Master of Science
+\end{center}
+\\
+\begin{center}
+\textbf{\LARGE{\textsc{
+Research Subject \\
+How to  Write a Thesis Using Latex \\}
+}}
+\end{center}
+\\
+\\
+\\
+\begin{center}
+Donald J. Trump\\
+123456\\
+Business Economics\\
+1600 Pennsylvania Ave NW \\
+Washington, DC 20500\\
+mail@me.com\\
+\end{center}
+\\
+\\
+\\
+\begin{center}
+\begin{tabular}{lll}
+\textbf{First Assessor:} & & Prof. Dr. Kurt C. Hose\\
+\textbf{Second Assessor:}& & Prof. Dr. Adam Smith\\
+\textbf{Academic Advisor:} & & M.Sc. David Dollar\\
+\end{tabular}
+\end{center}
+\\
+\\
+\\
+\\
+\begin{center}
+Stuttgart-Hohenheim, 11/03/2020
+\end{center}
+\end{tabular}
+\end{center}
+
+
+% =========== Main Part ========
+
+% Define line spacing (here: 1.5)
+\setstretch{1.5}
+% All directories have to be marked with roman page numbers
+\pagenumbering{Roman} % use Roman for a large numbering (II) or roman for small numbering (ii)
+
+
+% Putting an asterisk (*) behind a \chapter* or \section* tells the program to not list this part in the list of tables
+\chapter*{Abstract}
+
+
+\blindtext
+
+
+
+\tableofcontents
+
+% ====== List of Figures
+%\listoffigures
+
+
+% Changing the name from "Figure" to "List of Figures"
+\newpage
+\addcontentsline{toc}{chapter}{List of Figures}
+{\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\figurename~\oldnumberline}%
+\listoffigures}
+\newpage
+ 
+% ====== List of Tables
+%\listoftables 
+
+
+% Changing the name from "Table" to "List of Tables"
+\addcontentsline{toc}{chapter}{List of Tables}
+{\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\tablename~\oldnumberline}%
+\listoftables}
+\newpage
+
+
+
+% ====== List of Abbreviations
+\textbf{\huge{List of Abbreviations}}
+\begin{acronym}[LongestWord]
+	\acro{5G}{Fifth-generation mobile networks}	
+	\acro{e.g.}{exempli gratia}	
+	\acro{etc.}{et cetera}	
+	\acro{G7}{Group of Seven}	
+	\acro{N/A}{Not Available}
+	\acro{ZTE}{Zhongxing Telecommunication Equipment Company Limited}
+\end{acronym}
+
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+
+
+% ====== Glossary
+\newpage
+\textbf{\huge{Glossary}}\\
+
+
+\textbf{Advanced Country}\\
+The definition of an advanced country is based on "Table A" depicted in \citeA[p.145]{UnitedNations.2014} and includes all member states of the European Union, plus the \ac{G7}.\\
+
+\textbf{China}\\
+The term "China" in this paper refers to the People's Republic of China.\\ 
+
+\textbf{Developing Country}\\
+A developing country is defined according to the countries listed in "Table C" depicted in \citeA[p.146]{UnitedNations.2014} and includes e.g., China, India, and Brazil.\\ 
+
+
+\addcontentsline{toc}{chapter}{Glossary}
+
+
+\chapter{Introduction}
+
+\pagenumbering{arabic}
+
+\blindtext
+
+
+
+
+
+\chapter{Literature Review}
+\label{chapter_theoretical_background}
+
+
+Short introduction to provide an overview of the sections in this chapter
+
+\section{Overview}
+
+Text
+
+
+
+\section{Research Gaps}
+
+Text
+
+
+
+
+\chapter{Research Methodology}
+\label{chapter_research_methodology}
+
+Short introduction to provide an overview of the sections in this chapter
+
+\section{Research Design}
+\label{chapter_research_design}
+
+Text
+
+
+
+\section{Data Collection}
+\label{section_data_collection}
+
+Text
+
+\section{Method of Analysis}
+
+Text
+
+\newpage
+
+
+\chapter{Case Study}
+
+\begin{table}[htb]
+	\caption{Comparison of R\&D Expenses of Selected ICT Firms Denoted in Billion USD 2016–2019}
+	\begin{tabular}{ccccccccc}
+	\hline
+			&	\textbf{2016}	&	&	\textbf{2017}	&				& \textbf{2018}		&				& \textbf{2019}		&				\\
+	Company	&	R\&D	&	\% of sales	& R\&D	&	\% of sales	&	R\&D	&	\% of sales	&	R\&D	&	\% of sales	\\
+	\hline
+	Samsung	& 12.7	&	7.3\%	& 14.9		& 7.0\%			&	17.0	& 7.7\%	& 17.3	& 8.8\% \\
+	
+	Huawei	& 11.5	& 14.6\%	& 13.3		&	14.9\%		& 15.3		&	14.1\%		& 19.0		& 15.3\% \\
+	Nokia	& 5.4	& 20.8\%	& 5.5		& 21.2\%		& 5.5		& 20.5\%		& 4.9		& 18.9\% \\
+	Ericsson	& 3.7	& 14.2\%	& 4.4	&	18.8\%		& 4.5		& 18.5\%	& 4.1			& 17.1\% \\	
+	ZTE		& 1.9	& 12.6\%	&	1.9		& 11.9\%		& 1.6		& 12.8\%		& 1.8 	& 13.8\% \\
+	\hline
+	\end{tabular}
+	\textit{Note.} Data retrieved from \citeA{SamsungElectronicsCo..2020}, \citeA{HuaweiInvestment&HoldingCo.Ltd..2018, HuaweiInvestment&HoldingCo.Ltd..2020}, \citeA{NokiaCorporation.2018, NokiaCorporation.2020}, \citeA{TelefonaktiebolagetLMEricsson.2018, TelefonaktiebolagetLMEricsson.2020},  \citeA{ZTECorporation.2018, ZTECorporation.2020}
+		\label{tab:RnD_Comparison}
+\end{table}
+
+Table \ref{tab:RnD_Comparison} compares Huawei's annual R\&D expenses with the investments of some of its major competitors in the Informations and Communications Technology sector. Samsung is leading in absolute terms of R\&D investment, but on the last position when setting the R\&D expenses in relation to their total sales. Finland-based Nokia is leading in relative terms of R\&D investments during all four periods. The investments of Nokia, Ericsson, and ZTE had fluctuated over time, while the expenses of both Samsung and Huawei had increased continuously over the same period of time. In 2019, Huawei's absolute R\&D investment has surpassed Samsung's expenses. Considering that the various companies differ in size, it is better to compare these firms based on their relative R\&D investments, instead of their absolute investment sizes. This shows that in relative R\&D investment size, Huawei plays in the middle. Despite the smaller size of Western ICT firms, Nokia and Ericsson spend comparably more on R\&D than Huawei does.\\
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{graphic.eps}
+	\caption{Number of patent applications filed by Huawei and its subsidiaries under the PCT system 1999-2018. Data retrieved from OECD (2020c)}
+	\label{fig:huawei_priority_year}
+\end{figure}
+
+The frequency of all patent applications of Huawei and its subsidiaries to \citeA{OECD.2020} for the years 1999 until 2018 is depicted in Figure \ref{fig:huawei_priority_year}. It can be seen that there was a strong growth in patent applications especially in the early years. This growth resulted in a first local spike in patent applications in the year 2007 with 10,955 filings. The years 2008 until 2010 show an almost constant count of international patent applications. In 2011, the amount of patent filings jumped to 15,138 applications from 8,538 applications in the year before. For the years after, there was a rapid increase which resulted in a second spike in patent applications in 2016.  The number of patent applications decreased again afterwards. The plummet to the number of 1,015 patent applications in 2018 is due to the fact that the full list of patent applications has not been published yet.\\
+
+
+
+
+
+
+
+\chapter{Discussion}
+
+
+
+Text
+
+
+\chapter{Conclusion}
+
+Text
+
+
+
+
+% Literaturverzeichnis
+\newpage
+\bibliographystyle{apacite}
+\pagenumbering{Roman}
+\setcounter{page}{8}
+\bibliography{Literatur}
+
+
+\newpage
+\appendix
+
+
+\chapter{Appendix to the Text}
+
+
+
+
+
+\section{Independent Sample t-Test}
+
+Text
+
+
+
+\newpage
+
+% Include Declaration of Independence 
+%\includepdf[pages=-]{Eigenstaendigkeitserklaerung.pdf}
+
+\end{document}
