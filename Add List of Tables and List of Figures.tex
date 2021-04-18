@@ -1,25 +1,66 @@
-% =========== Use packages ========
+\documentclass{book}
 
-% Rename "Contents" into "Table of Contents"
-\addto\captionsenglish{
-  \renewcommand{\contentsname}
-    {Table of Contents}}
+  
+% ======= Use packages ===
+
+% APA 6th Tables and Figures formatting
+\usepackage{multirow,booktabs,setspace,caption}
+\DeclareCaptionLabelSeparator*{spaced}{\\[2ex]}
+
+% Table captions formatting according to APA 6th
+\captionsetup[table]{textfont=it,format=plain,justification=justified,
+  singlelinecheck=false,labelsep=spaced,skip=0pt}
+  
+% Figure captions formatting according to APA 6th
+\captionsetup[figure]{labelsep=period,labelfont=it,justification=justified,
+  singlelinecheck=false,font=doublespacing}
+  
+ % Including graphics 
+\usepackage{graphicx} 
+  
+  
+
 
 
 
 % =========== Main Part ========
-
-% Include "List of Figures" to Table of Contents
-\newpage
-\addcontentsline{toc}{chapter}{List of Figures}
-{\let\oldnumberline\numberline%
-\renewcommand{\numberline}{\figurename~\oldnumberline}%
-\listoffigures}
+\begin{document}
 
 
-% Include "List of Tables" to Table of Contents
-\newpage
-\addcontentsline{toc}{chapter}{List of Tables}
-{\let\oldnumberline\numberline%
-\renewcommand{\numberline}{\tablename~\oldnumberline}%
-\listoftables}
+% Table 
+\begin{table}
+	\caption{Table Title Written in Title Case (try https://capitalizemytitle.com/)}
+	\begin{tabular}{ccccccccc}
+	\hline
+			&	\textbf{2016}	&	&	\textbf{2017}	&				& \textbf{2018}		&				& \textbf{2019}		&				\\
+	Company	&	R\&D	&	\% of sales	& R\&D	&	\% of sales	&	R\&D	&	\% of sales	&	R\&D	&	\% of sales	\\
+	\hline
+	Samsung	& 12.7	&	7.3\%	& 14.9		& 7.0\%			&	17.0	& 7.7\%	& 17.3	& 8.8\% \\
+	
+	Huawei	& 11.5	& 14.6\%	& 13.3		&	14.9\%		& 15.3		&	14.1\%		& 19.0		& 15.3\% \\
+	Nokia	& 5.4	& 20.8\%	& 5.5		& 21.2\%		& 5.5		& 20.5\%		& 4.9		& 18.9\% \\
+	Ericsson	& 3.7	& 14.2\%	& 4.4	&	18.8\%		& 4.5		& 18.5\%	& 4.1			& 17.1\% \\	
+	ZTE		& 1.9	& 12.6\%	&	1.9		& 11.9\%		& 1.6		& 12.8\%		& 1.8 	& 13.8\% \\
+	\hline
+	\end{tabular}
+	\textit{Note.} Data retrieved from xxx
+	\label{tab:RnD_Comparison}
+\end{table}
+
+
+
+Table \ref{tab:RnD_Comparison} compares Huawei's annual R\&D expenses with the investments of some of its major competitors in the Informations and Communications Technology sector.
+
+
+
+
+
+% Figure
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{graphic_one.png}
+	\caption{Figure title written in sentence case (try https://capitalizemytitle.com/). Data retrieved from xxx}
+	\label{fig:data}
+\end{figure}
+
+\end{document}
