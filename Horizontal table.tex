@@ -1,16 +1,40 @@
+\documentclass{book}
+
+% ======= Use packages ===
+
+% Breaking huge tables to prevent overflow
+\usepackage{tabularx}
+% Adding toprule and bottomrule
+\usepackage{booktabs}
+
+\begin{document}
+
 % =========== Main Part ========
 
 % Horizontal table example
-\begin{table}[htb]
-\caption{Top 10 Importing and Exporting Countries of ICT Goods 2017}
-		\label{tab:top10_importers_exporters}
-\centering
-\begin{tabular}{ccccccc}
+\begin{table}
+
+	% Caption written in title case
+	\caption{Top 10 Importing and Exporting Countries of ICT Goods 2017}
+		
+	\centering
+	
+	\begin{tabular}{ccccccc} % each 'c' indicates one column
+
+	% Toprule as a thicker line to be added
 	\toprule
+	
 			&	\textbf{Top 10 exporters} &			&&			&	\textbf{Top 10 importers} &\\
+			
+	% Horizontal line ranging from column 1 until column 3	and another line ranging from column 5 up to column 7
 	\cline{1-3} \cline{5-7}
+	
+	
 	Rank	&	Country				&	USD billion	&&	Rank	&	Country				& USD billion \\
+	
 	\cline{1-3} \cline{5-7}
+	
+	
 	1		&	China				&	6.13		&&	1		&	USA					& 3.44 \\
 	2		&	Korea				&	1.42		&&	2		&	China				& 3.30 \\
 	3		&	Taiwan				&	1.39		&&	3		&	Hong Kong			& 3.06 \\
@@ -21,9 +45,22 @@
 	8		&	Mexico				&	0.66		&&	8		&	Taiwan				& 0.64 \\
 	9		&	Japan				&	0.58		&&	9		&	Mexico				& 0.63 \\
 	10		&	Netherlands			&	0.56		&&	10		&	Netherlands			& 0.63 \\
+	
+	% Adding a thicker line at the bottom
 	\bottomrule
+	
+	
 	\end{tabular}
+	
+	% Adding the sources
 	\begin{flushleft}
-	\textit{Note.} Adapted from UNCTAD (2019)
+	\textit{Note.} Adapted from Source (2019)
 	\end{flushleft}
+	
+	% Labeling the table for referencing it in the text
+	\label{tab:top10_importers_exporters}
+	
 \end{table}
+
+
+\end{document}
