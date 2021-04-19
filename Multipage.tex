@@ -1,20 +1,48 @@
+\documentclass{book}
+
+% ======= Use packages ===
+
+% Including graphics 
+\usepackage{graphicx}
+% Displaying graphics on the same height
+\usepackage{subcaption}
+
+
 % =========== Main Part ========
 
-\begin{figure}
-\begin{subfigure}[c]{0.5\textwidth}
-\includegraphics[scale=0.8]{Top_Arvanitidou.png}
-\subcaption{Arvanitidou, Evangelia}
-\includegraphics[scale=0.8]{Top_Boeckh.png}
-\subcaption{Boeckh, Dieter}
-\includegraphics[scale=0.7]{Top_Candau.png}
-\subcaption{Candau, Didier}
-\end{subfigure}
-\begin{subfigure}[r]{0.5\textwidth}
-\includegraphics[scale=0.8]{Top_Hartung.png}
-\subcaption{Hartung, Christian}
-\includegraphics[scale=0.7]{Top_Wei.png}
-\subcaption{Wei, Karl Shiqing}
-\end{subfigure}
-\caption{Five biggest patenting communities}
-\label{fig:top_communities}
-\end{figure}
+
+\begin{document}
+
+	% Goal: displaying four graphics divided into two colums next to each other on the same height
+	\begin{figure}
+
+		% First column
+				% Indicate the position in square brackets: [l=left; c=center; r=right]
+				% You might restrict the overall space for the first column as a proportion of the textwidth: In this case it is restricted to 50% (or 0.5) of the textwidth
+		\begin{subfigure}[l]{0.5\textwidth}
+				% Also the space requirement of a graphic can be reduced by cutting down its scale: In this case the scale is reduced to 30% (or 0.3) of its original size
+		\includegraphics[scale=0.3]{graphic_one.png}
+		\subcaption{Caption graphic one}
+		\includegraphics[scale=0.3]{graphic_two.png}
+		\subcaption{Caption graphic two}
+		\end{subfigure}
+
+
+		% Second column
+		
+		\begin{subfigure}[r]{0.5\textwidth}
+		\includegraphics[scale=0.3]{graphic_three.png}
+		\subcaption{Caption graphic three}
+		\includegraphics[scale=0.3]{graphic_four.png}
+		\subcaption{Caption graphic four}
+		\end{subfigure}
+
+		\caption{How to fit four graphics on one page}
+		
+		% Label the figure to reference it in the text
+		\label{figure:multipage}
+		
+	\end{figure}
+
+
+\end{document}
