@@ -1,54 +1,96 @@
+\documentclass{book}
+
+% ======= Use Packages ========
+
+% Breaking huge tables to prevent overflow
+\usepackage{tabularx}
+% Show tables in sideways
+\usepackage{rotating}
+
+\begin{document}
+
 % =========== Main Part ========
 
 % Sideways table example
 \begin{sidewaystable}
 	\caption{R\&D Locations of Huawei in Advanced Countries}
+	
 	\begin{tabularx}{1.0\textwidth}{cccccX}   %{l|l|l|c|c|l}
-	\hline
+	
+		% Horizontal line
+		\hline
+		
+		
 		Region 	& Country 	& Location 	& Year			& R\&D staff	& Area of focus \\
+		
+		
 		\hline
 
-		Europe & Germany	& Munich	& 2008\footnotemark[12]			& 500\footnotemark[4]			& German Research Center, next generation networks, antenna, hardware and engineering, terrabits optical systems, core network, application and software\footnotemark[12] \\
-				& 			& Düsseldorf & 2011			& 				& Internet of Things platforms, Industry 4.0 test beds, network security\footnotemark[12] \\			
-				&			& Nuremberg	& 2016			& 				& Renewable energy solutions, solar inverter solutions\footnotemark[12] \\			
-				&			& Bonn		& 2018\footnotemark[8]			& 				& Artificial intelligence, next generation networks, standardization\footnotemark[8] \\
-		\cline{2-6}
-				& Ireland	& Athlone	& 2011\footnotemark[7]			&				& Cloud computing\footnotemark[7] \\
-				&			& Cork		& 2012\footnotemark[7]			& 				& Site-reliable engineering, customer experience\footnotemark[7] \footnotemark[12] \\
-				& 			& Dublin	& 2015\footnotemark[7]			& 100\footnotemark[9]			& Irish headquarters, artificial intelligence, customer experience\footnotemark[7] \footnotemark[12] \\
-		\cline{2-6}
-				& Finland	& Helsinki	& 2012			& 100\footnotemark[6]			& Mobile device technology\footnotemark[12] \\
-		\cline{2-6}
-				& France	& Sophia-Antipolis	& 2013	& 				& Chipsets, smartphone cameras, image signal processing, standards\footnotemark[12] \\
-				&			& Paris		& 2015\footnotemark[1]			& 				& Standards, aesthetics and design center\footnotemark[12]\\
-		\cline{1-6}
-
-North America 	& USA		& Dallas	& 1999			&				& Next generations networks, algorithms, patenting\footnotemark[12] \footnotemark[14] \\
-				&			& Plano		& 2001\footnotemark[5]			& 				& USA headquarters, engineering, patenting\footnotemark[14] \\
-				&			& Bridgewater & 2011\footnotemark[2] \footnotemark[14]		& 110\footnotemark[2]			& Network technology, wireless technologies\footnotemark[12] \footnotemark[14] \\
-				&			& Santa Clara & 2011\footnotemark[5] \footnotemark[14]		& 700\footnotemark[14]			& Wireless technologies, software design, artificial intelligence\footnotemark[14] \\
-				& 			& San Diego & 2012			&				& Terminal technologies, chip sets\footnotemark[12] \\
-				&			& Seattle	& 2016\footnotemark[3]			& 100\footnotemark[3]			& Cloud computing\footnotemark[3] \\
-		\cline{2-6}
-				& Canada	& Toronto	& 2008			& 1.100\footnotemark[11]			& High-speed wireless technology\footnotemark[11] \\
-				&			& Ottawa	& 2010\footnotemark[10]			& 200\footnotemark[13]			& Next generation networks, wireline, wireless, optical communication\footnotemark[10] \footnotemark[13]\\
-		\cline{2-6}	
-		\end{tabularx}
-
-	\footnotetext[1]{\citeA{Boutellier.2008}}
-	\footnotetext[2]{\citeA{BusinessWireInc..2011}}
-	\footnotetext[3]{\citeA{Deng.2016}}
-	\footnotetext[4]{\citeA{EFFRA.2020}}
-	\footnotetext[5]{\citeA{HuaweiTechnologiesCo.Ltd..2011}}
-	\footnotetext[6]{\citeA{HuaweiTechnologiesCo.Ltd..2012}}
-	\footnotetext[7]{\citeA{HuaweiTechnologiesCo.Ltd..2015}}
-	\footnotetext[8]{\citeA{HuaweiTechnologiesCo.Ltd..2018b}}
-	\footnotetext[9]{\citeA{HuaweiTechnologiesCo.Ltd..2019e}}	
-	\footnotetext[10]{\citeA{Lightwave.2010}}
-	\footnotetext[11]{\citeA{McNish.2019}}
-	\footnotetext[12]{\citeA{Pawlicki.2017}}
-	\footnotetext[13]{\citeA{Tomas.2019}}
-	\footnotetext[14]{\citeA{Woo.2018}}	
+		Europe & Germany	& Munich	& 2008			& 500			& German Research Center, next generation networks, antenna, hardware and engineering, terrabits optical systems, core network, application and software \\
+		
+				& 			& Düsseldorf & 2011			& 				& Internet of Things platforms, Industry 4.0 test beds, network security \\
+							
+				&			& Nuremberg	& 2016			& 				& Renewable energy solutions, solar inverter solutions \\		
 					
-	\label{tab:huawei_advanced}	
+				&			& Bonn		& 2018			& 				& Artificial intelligence, next generation networks, standardization \\
+			
+		% Horizontal line starting at column 2 and ending at column 6		
+		\cline{2-6}
+		
+		
+				& Ireland	& Athlone	& 2011			&				& Cloud computing \\
+				
+				&			& Cork		& 2012			& 				& Site-reliable engineering, customer experience \\
+				
+				& 			& Dublin	& 2015			& 100			& Irish headquarters, artificial intelligence, customer experience \\
+				
+				
+		\cline{2-6}
+		
+		
+				& Finland	& Helsinki	& 2012			& 100			& Mobile device technology \\
+				
+				
+		\cline{2-6}
+		
+		
+				& France	& Sophia-Antipolis	& 2013	& 				& Chipsets, smartphone cameras, image signal processing, standards \\
+				
+				&			& Paris		& 2015			& 				& Standards, aesthetics and design center\\
+				
+		\hline
+		
+
+North America 	& USA		& Dallas	& 1999			&				& Next generations networks, algorithms, patenting \\
+
+				&			& Plano		& 2001			& 				& USA headquarters, engineering, patenting \\
+				
+				&			& Bridgewater & 2011		& 110			& Network technology, wireless technologies \\
+				
+				&			& Santa Clara & 2011		& 700		& Wireless technologies, software design, artificial intelligence \\
+				
+				& 			& San Diego & 2012			&				& Terminal technologies, chip sets \\
+				
+				&			& Seattle	& 2016			& 100			& Cloud computing \\
+				
+				
+		\cline{2-6}
+		
+		
+				& Canada	& Toronto	& 2008			& 1.100			& High-speed wireless technology \\
+				
+				&			& Ottawa	& 2010			& 200			& Next generation networks, wireline, wireless, optical communication\\
+				
+				
+		\cline{2-6}	
+		
+		
+		\end{tabularx}
+	
+	% Labeling the table to reference it in the text			
+	\label{table:huawei_advanced}	
+	
 \end{sidewaystable} 
+
+
+\end{document}
